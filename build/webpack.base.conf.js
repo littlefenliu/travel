@@ -28,14 +28,14 @@ module.exports = {
         path: config.build.assetsRoot,
         filename: '[name].js',
         publicPath: process.env.NODE_ENV === 'production' ?
-            config.build.assetsPublicPath :
-            config.dev.assetsPublicPath
+            config.build.assetsPublicPath : config.dev.assetsPublicPath
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
         alias: {
             'vue$': 'vue/dist/vue.esm.js',
             '@': resolve('src'),
+            'styles': resolve('src/assets/styles')
         }
     },
     module: {
@@ -74,6 +74,10 @@ module.exports = {
                     limit: 10000,
                     name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
                 }
+            },
+            {
+                test: /\.styl$/,
+                loader: 'stylus-loader', // compiles Styl to CSS
             }
         ]
     },

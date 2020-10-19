@@ -7,11 +7,15 @@ import router from './router'
 // 解决click300ms延迟问题 npm fast click模块
 import fastClick from 'fastclick'
 // 在项目入口处引用css
-import './assets/styles/reset.css'
+import 'styles/reset.css'
 // 解决1像素边框问题
-import './assets/styles/border.css'
+import 'styles/border.css'
+// 引入iconfont.css
+import 'styles/iconfont.css'
+
 
 Vue.config.productionTip = false
+    // fastclick解决延迟问题
 fastClick.attach(document.body);
 /* eslint-disable no-new */
 new Vue({
