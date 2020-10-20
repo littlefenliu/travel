@@ -1,11 +1,13 @@
 <template>
+<div class="wrapper">
     <swiper :options="swiperOption">
         <swiper-slide v-for="item of swipList" :key='item.id'>
         <img class='swiper-img' :src="item.imgUrl" alt="">
         </swiper-slide>
-        <!-- 显示分页内容 -->
+        <!-- 显示分页内容 小圆点-->
         <div class="swiper-pagination" slot="pagination"></div>
     </swiper>
+</div>
 </template>
 <script>
 export default{
@@ -34,6 +36,13 @@ export default{
 }
 </script>
 <style lang="stylus" scoped>
+.wrapper >>> .swiper-pagination-bullet
+    background: #fff !important 
+.wrapper
+    width: 100%
+    height: 55%vm
+    background-color: #ccc
     .swiper-img
         width: 100%
+
 </style>
