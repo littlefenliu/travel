@@ -24,11 +24,11 @@ export default {
 .footer-wrapper
   width:100%
   background-color: #eee
+  padding-top: .3rem
   .footer-desc
-    padding-top:.3rem
-    overflow :hidden
+    padding:.2rem 0
+    background: #fff
   .footer-icon
-    margin-top:.2rem
     padding: .2rem 0
     display:flex
     justify-content :space-evenly
