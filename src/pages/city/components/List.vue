@@ -19,7 +19,7 @@
             </div>
        </div>
 
-        <div class="area" v-for="(item,key) of cities" :key="key">
+        <div class="area" v-for="(item,key) of cities" :key="key" :ref="key">
            <div class="title border-top-bottom">{{key}}</div>
            <div class="item-list">
                <div 
@@ -40,10 +40,23 @@ export default {
     name:"CityList",
     props:{
         cities: Object,
-        hot: Array
+        hot: Array,
+        letter:String
     },
     mounted() {
-        this.scoll=Bscroll(this.$refs.wrapper)
+        this.scroll=new Bscroll(this.$refs.wrapper)
+        // console.log(this.$refs);
+    },
+    watch:{
+        // 监听letter变化
+        letter() {
+            // 如果字符非空，会自动滚到字符开头的位置
+            if(this.letter){
+                // better-scroll参数需要使用dom  
+                const element=this.$refs[this.letter][0] //dom形式
+                this.scroll.scrollToElement(element)
+            }
+        }
     }
 }
 </script>
