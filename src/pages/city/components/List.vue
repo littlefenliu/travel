@@ -1,0 +1,126 @@
+<template>
+    <div class="list" ref="wrapper">
+    <div>
+       <div class="area">
+           <div class="title border-top-bottom">当前城市</div>
+           <div class="button-list">
+               <div class="button-wrapper">
+                <div class="button">南京</div>
+                </div>
+                <div class="button-wrapper">
+                <div class="button">南京</div>
+                </div>
+                <div class="button-wrapper">
+                <div class="button">南京</div>
+                </div>
+                <div class="button-wrapper">
+                <div class="button">南京</div>
+                </div>
+            </div>
+        </div>
+
+       <div class="area">
+           <div class="title border-top-bottom">热门城市</div>
+           <div class="button-list">
+                <div class="button-wrapper">
+                    <div class="button">南京</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">南京</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">南京</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">南京</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">南京</div>
+                </div>
+                <div class="button-wrapper">
+                    <div class="button">南京</div>
+                </div>
+            </div>
+       </div>
+
+        <div class="area">
+           <div class="title border-top-bottom">A</div>
+           <div class="item-list">
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+           </div>
+           <div class="title border-top-bottom">A</div>
+           <div class="item-list">
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+           </div>
+           <div class="title border-top-bottom">A</div>
+           <div class="item-list">
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+               <div class="item border-bottom">阿拉善</div>
+           </div>
+        </div>
+    </div>
+    </div>
+</template>
+
+<script>
+import Bscroll from "better-scroll"
+export default {
+    name:"CityList",
+    mounted() {
+        this.scoll=Bscroll(this.$refs.wrapper)
+    }
+}
+</script>
+<style lang="stylus" scoped>
+@import "~styles/variables.styl"
+.list 
+    overflow hidden
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    margin-top 1.6rem
+    .border-top-bottom
+    &:before
+        border-color: #ccc
+    &:after
+        border-color: #ccc
+    .border-bottom
+        &:before
+            border-color: #eee
+        &:after
+            border-color: #eee
+    .title 
+        line-height .44rem
+        font-size .26rem
+        background-color #eee
+        paddind-left .2rem
+    .button-list
+        overflow hidden
+        padding .1rem .6rem .1rem
+        padding: .1rem
+      .button-wrapper
+        float left
+        width 33.33%
+      .button
+        text-align center
+        margin .1rem 
+        padding .1rem 0
+        border .02rem solid #ccc
+        border-radius .06rem  
+    .item-list > .item
+        line-height .76rem
+        padding-left .2rem
+</style>
