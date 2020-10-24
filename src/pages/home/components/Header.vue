@@ -9,7 +9,7 @@
     <!-- 点击跳转到city页面 -->
     <router-link to="/city">
         <div class="header-right">
-            {{this.city}}
+            {{this.$store.state.city}}
             <span class="iconfont">&#xe666;</span>
             </div>
         </router-link>

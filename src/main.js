@@ -4,6 +4,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+// 引入vuex
+import store from './store/index'
 // 解决click300ms延迟问题 npm fast click模块
 import fastClick from 'fastclick'
 // 在项目入口处引用css
@@ -25,8 +27,9 @@ Vue.use(VueAwesomeSwiper)
 new Vue({
     el: '#app',
     router,
+    store,
     components: { App },
     template: '<App/>'
 })
 
-// 路由设置：根据句路由的地址不同 返回不同的页面
+// 路由设置：根据路由的地址不同 返回不同的页面
