@@ -30,6 +30,7 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 import Bscroll from "better-scroll"
 export default {
     name:"CitySearch",
@@ -45,9 +46,10 @@ export default {
     },
     methods:{
         handleCityClick(city){
-            this.$store.commit('changeCity',city)
+            this.changeCity(city)
             this.$router.push('/')
-        }
+        },
+        ...mapMutations(['changeCity'])
     },
     computed:{
         // 优化5：判断列表有没有数据，避免在模板里判断

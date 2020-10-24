@@ -1,6 +1,9 @@
 <template>
     <ul class="list">
-      <li class="item" v-for="(item,key) of cities" :key="key">
+      <li 
+      class="item" 
+      v-for="(item,key) of cities" 
+      :key="key">
         {{key}}
         </li>
     </ul>
