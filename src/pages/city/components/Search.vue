@@ -12,12 +12,16 @@
         ref="search"
         v-show="keyword">
         <ul>
-            <li class="search-item" v-for="item of list" 
-                :key="item.id">
+            <li class="search-item" 
+                v-for="item of list" 
+                :key="item.id"
+                @click="handleCityClick(item.name)">
                 {{item.name}}
             </li>
             <!-- 优化3：当list长度为0时才显示提示 -->
-            <li class="search-item" v-show="hasNoData">
+            <li 
+                class="search-item" 
+                v-show="hasNoData">
                 没有找到匹配数据，请重新输入！
             </li>
         </ul>
@@ -26,6 +30,7 @@
 </template>
 
 <script>
+import {mapMutations} from 'vuex'
 import Bscroll from "better-scroll"
 export default {
     name:"CitySearch",
@@ -39,6 +44,13 @@ export default {
             timer:null
         }
     },
+    methods:{
+        handleCityClick(city){
+            this.changeCity(city)
+            this.$router.push('/')
+        },
+        ...mapMutations(['changeCity'])
+    },
     computed:{
         // 优化5：判断列表有没有数据，避免在模板里判断
         hasNoData(){
@@ -51,7 +63,7 @@ export default {
             if(this.timer){
                 clearTimeout(this.timer)
             }
-            // 优化2：没有关键词时清除列表
+           // 优化2：没有关键词时清除列表 
             if(!this.keyword){
                 this.list=[]
                 return 
