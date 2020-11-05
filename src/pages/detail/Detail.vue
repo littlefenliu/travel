@@ -2,31 +2,21 @@
     <div>
     <detail-banner></detail-banner>
     <detail-header></detail-header>
-<<<<<<< HEAD
-    <div class="content"></div>
-=======
     <div class="content">
         <detail-list :list="list"></detail-list>
     </div>
->>>>>>> detail-banner
     </div>
 </template>
 
 <script>
 import DetailBanner from './components/Banner'
 import DetailHeader from './components/Header'
-<<<<<<< HEAD
-=======
 import DetailList from './components/List'
->>>>>>> detail-banner
 
 export default {
     name:'Detail',
     components:{
         DetailBanner,
-<<<<<<< HEAD
-        DetailHeader
-=======
         DetailHeader,
         DetailList
     },
@@ -58,16 +48,11 @@ export default {
                     }]
             }]
         }
->>>>>>> detail-banner
     }
 }
 </script>
 
 <style lang="stylus" scoped>
 .content
-<<<<<<< HEAD
-    height 50rem
-=======
     height 20rem
->>>>>>> detail-banner
 </style>

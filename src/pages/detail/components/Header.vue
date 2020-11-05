@@ -45,12 +45,9 @@ export default {
     },
     activated(){
         window.addEventListener('scroll',this.handleScroll)
-<<<<<<< HEAD
     },
     deactivated(){
         window.removeEventListener('scroll',this.handleScroll)
-=======
->>>>>>> detail-banner
     }
 }
 </script>
