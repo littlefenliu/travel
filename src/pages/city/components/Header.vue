@@ -22,12 +22,12 @@ export default {
     color: #fff
     background: $bgColor
     font-size: .32rem
-.header-back
-    position absolute
-    top 0
-    left 0
-    width .64rem
-    text-align center
-    font-size .4rem
-    color #fff
+    .header-back
+        position absolute
+        top 0
+        left 0
+        width .64rem
+        text-align center
+        font-size .4rem
+        color #fff
 </style>
