@@ -45,9 +45,12 @@ export default {
     },
     activated(){
         window.addEventListener('scroll',this.handleScroll)
+<<<<<<< HEAD
     },
     deactivated(){
         window.removeEventListener('scroll',this.handleScroll)
+=======
+>>>>>>> detail-banner
     }
 }
 </script>
@@ -68,6 +71,10 @@ export default {
         color #fff
         font-size .4rem
 .header-fixed 
+<<<<<<< HEAD
+=======
+        z-index 2
+>>>>>>> detail-banner
         position fixed
         left 0
         top 0
